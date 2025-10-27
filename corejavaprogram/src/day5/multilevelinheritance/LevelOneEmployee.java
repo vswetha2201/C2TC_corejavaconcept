@@ -1,37 +1,21 @@
 package day5.multilevelinheritance;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class LevelOneEmployee extends Employee {
-    private int noOfShares;
+    private int level;
     private String authority;
-    
-    public LevelOneEmployee() {}
-    
-    public LevelOneEmployee(String name, long contactNo, Date dateOfBirth,String deptName, double baseSalary, int noOfShares, String authority) {
-    	super(name,contactNo,dateOfBirth,deptName, baseSalary);
-        this.noOfShares = noOfShares;
-        this.authority=authority;
+
+    public LevelOneEmployee(String name, long phone, LocalDate dob, String department, double salary, int level, String authority) {
+        super(name, phone, dob, department, salary);
+        this.level = level;
+        this.authority = authority;
     }
 
-	public int getNoOfShares() {
-		return noOfShares;
-	}
-
-	public void setNoOfShares(int noOfShares) {
-		this.noOfShares = noOfShares;
-	}
-
-	public String getAuthority() {
-		return authority;
-	}
-
-	public void setAuthority(String authority) {
-		this.authority = authority;
-	}
-
-	@Override
-	public String toString() {
-		return "LevelOneEmployee ["+super.toString()+"noOfShares=" + noOfShares + ", authority=" + authority + "]";
-	}   
+    @Override
+    public String toString() {
+        return "LevelOneEmployee [Name=" + name + ", Phone=" + phone + ", DOB=" + dob +
+                ", Department=" + department + ", Salary=" + salary +
+                ", Level=" + level + ", Authority=" + authority + "]";
+    }
 }

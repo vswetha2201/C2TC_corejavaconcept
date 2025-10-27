@@ -1,49 +1,22 @@
 package day5.multilevelinheritance;
 
-import java.util.Date;
+
+
+import java.time.LocalDate;
 
 public class Person {
-	private String name;
-	private long conatctNo;
-	private Date dateOfBirth;
+    protected String name;
+    protected long phone;
+    protected LocalDate dob;
 
-	public Person(String name, long conatctNo, Date dateOfBirth) {
-		super();
-		this.name = name;
-		this.conatctNo = conatctNo;
-		this.dateOfBirth = dateOfBirth;
-	}
+    public Person(String name, long phone, LocalDate dob) {
+        this.name = name;
+        this.phone = phone;
+        this.dob = dob;
+    }
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public long getConatctNo() {
-		return conatctNo;
-	}
-
-	public void setConatctNo(long conatctNo) {
-		this.conatctNo = conatctNo;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	public Person() {
-	}
-
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", conatctNo=" + conatctNo + ", dateOfBirth=" + dateOfBirth + "]";
-	}
-
+    @Override
+    public String toString() {
+        return "Person [Name=" + name + ", Phone=" + phone + ", DOB=" + dob + "]";
+    }
 }
