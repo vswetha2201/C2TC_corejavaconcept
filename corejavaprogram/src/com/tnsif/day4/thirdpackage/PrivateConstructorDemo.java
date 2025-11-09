@@ -1,4 +1,4 @@
-package com.tnsifday4.thirdpackage;
+package com.tnsif.day4.thirdpackage;
 
 public class PrivateConstructorDemo {
 	public static void main(String s[]) {
